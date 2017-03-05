@@ -1,6 +1,9 @@
 # CMS-Installer v.1.0.0
 Install WordPress and Typo3 simple
 
+### Download
+[Download the file](https://github.com/Thejuse/CMS-Installer)
+
 ### How to Install
 1. Download install_script.php
 2. Upload install_script.php on your Webspace in public_html folder
