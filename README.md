@@ -12,4 +12,11 @@ Install WordPress and Typo3 simple
 3. When the installation is finished. Then go to your Page
 4. Type in your Database credentials and add an User
 
+### Planned CMS and Software
+* Shopware 5  (Planed in v.1.1.0)
+* MediaWiki   (Planed in v.1.1.0)
+* OwnCloud    (Planed in v.1.2.0)
+* NextCloud   (Planed in v.1.2.0)
+* EspoCRM     (Planed in v.1.3.0)
+
 Copyright 2017 - [Julian Seidl](http://jseidl.at)
