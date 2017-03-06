@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Web-Service Installer</title>
 
+		<!-- CMS Installer -->
+		<!-- Coded by jseidl.at -->
+		<!-- v_1.1.0 Version -->
+		<!-- Copyright 2017 -->
+
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -32,49 +37,74 @@
 		<?php
 			$output = "";
 			$toPageOutput = "";
-			if($_POST['cms'] == null){
-
-			}
-			else if($_POST['cms'] == 'Typo3 7.6.16'){
-				$output ='<div class="alert alert-success"> '. $_POST['cms'] .' is now installed!</div>';
-				$toPageOutput = "<p><strong>Your CMS is installed</strong></p><p>Open your Page <a href="/">Here</a></p>";
-				shell_exec('wget https://downloads.sourceforge.net/project/typo3/TYPO3%20Source%20and%20Dummy/TYPO3%207.6.16/typo3_src-7.6.16.tar.gz');
-				shell_exec('tar -xzvf typo3_src-7.6.16.tar.gz');
-				shell_exec('mv typo3_src-7.6.16/* .');
-				shell_exec('rm -rf typo3_src-7.6.16/');
-				shell_exec('ln -s ../public_html typo3_src');
-				shell_exec('ln -s typo3_src/typo3 typo3');
-				shell_exec('ln -s typo3_src/index.php index.php');
-				shell_exec('rm -rf typo3_src-7.6.16.tar.gz');
-				shell_exec('chmod -R 777 ../public_html');
-				shell_exec('rm -rf install_script.php');
-			}
-			else if($_POST['cms'] == 'WordPress (German)'){
-				$output ='<div class="alert alert-success"> '. $_POST['cms'] .' is now installed!</div>';
-				$toPageOutput = "<p><strong>Your CMS is installed</strong></p><p>Open your Page <a href="/">Here</a></p>";
-				shell_exec('wget https://de.wordpress.org/latest-de_DE.zip');
-				shell_exec('unzip latest-de_DE.zip');
-				shell_exec('mv wordpress/* .');
-				shell_exec('rm -rf wordpress/');
-				shell_exec('rm -rf latest-de_DE.zip');
-				shell_exec('chmod -R 777 ../public_html');
-				shell_exec('rm -rf install_script.php');
-			}
-			else if($_POST['cms'] == 'WordPress (All Languages)'){
-				$output ='<div class="alert alert-success"> '. $_POST['cms'] .' is now installed!</div>';
-				$toPageOutput = "<p><strong>Your CMS is installed</strong></p><p>Open your Page <a href="/">Here</a></p>";
-				shell_exec('wget https://wordpress.org/latest.tar.gz');
-				shell_exec('tar -xzvf latest.tar.gz');
-				shell_exec('mv wordpress/* .');
-				shell_exec('rm -rf wordpress/');
-				shell_exec('rm -rf latest.tar.gz');
-				shell_exec('chmod -R 777 ../public_html');
-				shell_exec('rm -rf install_script.php');
-			}
-			else{
-				$output ='<div class="alert alert-danger"><strong>Error!</strong> Please choose a CMS!</div>';
-				$toPageOutput = "";
-			}
+            
+            $httpMethod = filter_input(INPUT_SERVER, 'REQUEST_METHOD');
+            $cms = filter_input(INPUT_POST, 'cms');
+            
+            if ($httpMethod === 'POST') {
+                if($cms == 'Typo3 7.6.16'){
+                    $output ='<div class="alert alert-success"> '. $cms .' is now installed!</div>';
+                    $toPageOutput = '<p><strong>Your CMS is installed</strong></p><p>Open your Page <a href="/">Here</a></p>';
+                    shell_exec('wget https://downloads.sourceforge.net/project/typo3/TYPO3%20Source%20and%20Dummy/TYPO3%207.6.16/typo3_src-7.6.16.tar.gz');
+                    shell_exec('tar -xzvf typo3_src-7.6.16.tar.gz');
+                    shell_exec('mv typo3_src-7.6.16/* .');
+                    shell_exec('rm -rf typo3_src-7.6.16/');
+                    shell_exec('ln -s ../public_html typo3_src');
+                    shell_exec('ln -s typo3_src/typo3 typo3');
+                    shell_exec('ln -s typo3_src/index.php index.php');
+                    shell_exec('rm -rf typo3_src-7.6.16.tar.gz');
+                    shell_exec('chmod -R 777 ../public_html');
+                    shell_exec('rm -rf install_script.php');
+                }
+                else if($cms == 'WordPress (German)'){
+                    $output ='<div class="alert alert-success"> '. $cms .' is now installed!</div>';
+                    $toPageOutput = '<p><strong>Your CMS is installed</strong></p><p>Open your Page <a href="/">Here</a></p>';
+                    shell_exec('wget https://de.wordpress.org/latest-de_DE.zip');
+                    shell_exec('unzip latest-de_DE.zip');
+                    shell_exec('mv wordpress/* .');
+                    shell_exec('rm -rf wordpress/');
+                    shell_exec('rm -rf latest-de_DE.zip');
+                    shell_exec('chmod -R 777 ../public_html');
+                    shell_exec('rm -rf install_script.php');
+                }
+                else if($cms == 'WordPress (All Languages)'){
+                    $output ='<div class="alert alert-success"> '. $cms .' is now installed!</div>';
+                    $toPageOutput = '<p><strong>Your CMS is installed</strong></p><p>Open your Page <a href="/">Here</a></p>';
+                    shell_exec('wget https://wordpress.org/latest.tar.gz');
+                    shell_exec('tar -xzvf latest.tar.gz');
+                    shell_exec('mv wordpress/* .');
+                    shell_exec('rm -rf wordpress/');
+                    shell_exec('rm -rf latest.tar.gz');
+                    shell_exec('chmod -R 777 ../public_html');
+                    shell_exec('rm -rf install_script.php');
+                }
+                else if($cms == 'Shopware 5.2.20'){
+                    $output ='<div class="alert alert-success"> '. $cms .' is now installed!</div>';
+                    $toPageOutput = '<p><strong>Your '. $cms .' is installed</strong></p><p>Open your Page <a href="/">Here</a></p>';
+                    shell_exec('wget http://releases.s3.shopware.com.s3.amazonaws.com/install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0.zip');
+                    shell_exec('unzip install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0.zip');
+                    shell_exec('mv install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0/* .');
+                    shell_exec('rm -rf install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0/');
+                    shell_exec('rm -rf install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0.zip');
+                    shell_exec('chmod -R 777 ../public_html');
+                    shell_exec('rm -rf install_script.php');
+                }
+                else if($cms == 'MediaWiki 1.28.0'){
+                    $output ='<div class="alert alert-success"> '. $cms .' is now installed!</div>';
+                    $toPageOutput = '<p><strong>Your '. $cms .' is installed</strong></p><p>Open your Page <a href="/">Here</a></p>';
+                    shell_exec('wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.0.tar.gz');
+                    shell_exec('tar -xzvf mediawiki-1.28.0.tar.gz');
+                    shell_exec('mv mediawiki-1.28.0/* .');
+                    shell_exec('rm -rf mediawiki-1.28.0/');
+                    shell_exec('rm -rf mediawiki-1.28.0.tar.gz');
+                    shell_exec('chmod -R 777 ../public_html');
+                    shell_exec('rm -rf install_script.php');
+                }
+                else{
+                    $output ='<div class="alert alert-danger"><strong>Error!</strong> Please choose a CMS!</div>';
+                    $toPageOutput = "";
+                }
+            }
 		?>
 		<!-- Alerts -->
 		<div class="container" style="margin-top: 30px;">
@@ -100,6 +130,8 @@
 								<option>Typo3 7.6.16</option>
 								<option>WordPress (German)</option>
 								<option>WordPress (All Languages)</option>
+								<option>Shopware 5.2.20</option>
+								<option>MediaWiki 1.28.0</option>
 							</select>
 						</div>
 						<button type="submit" class="btn btn-primary">Install</button>
@@ -131,10 +163,13 @@
 		<footer>
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<p>&copy; <?php echo date("Y"); ?> coded by <a href="http://jseidl.at">Julian Seidl</a></p>
 					</div>
-					<div class="col-sm-6 text-right">
+					<div class="col-sm-4 text-center">
+						<p>v.1.1.0</p>
+					</div>
+					<div class="col-sm-4 text-right">
 						<ul>
 							<li><a href="https://github.com/Thejuse/CMS-Installer/issues">Feature Request</a></li>
 							<li><a href="https://github.com/Thejuse/CMS-Installer/issues">Report Bug</a></li>
