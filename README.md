@@ -1,4 +1,4 @@
-# CMS-Installer v.1.0.0
+# CMS-Installer v.1.1.0
 Install WordPress and Typo3 simple
 
 ### How to Install
@@ -12,9 +12,14 @@ Install WordPress and Typo3 simple
 3. When the installation is finished. Then go to your Page
 4. Type in your Database credentials and add an User
 
+### Features
+* Typo3 7.6.16 (added v_1.ß.0)
+* WordPress  (added v_1.0.0)
+* WordPress German (added v_1.0.0)
+* Shopware 5  (added v_1.1.0)
+* MediaWiki   (added v_1.1.0)
+
 ### Planned CMS and Software
-* Shopware 5  (Planed in v.1.1.0)
-* MediaWiki   (Planed in v.1.1.0)
 * OwnCloud    (Planed in v.1.2.0)
 * NextCloud   (Planed in v.1.2.0)
 * EspoCRM     (Planed in v.1.3.0)
