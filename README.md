@@ -13,7 +13,7 @@ Install WordPress and Typo3 simple
 4. Type in your Database credentials and add an User
 
 ### Features
-* Typo3 7.6.16 (added v_1.ß.0)
+* Typo3 7.6.16 (added v_1.0.0)
 * WordPress  (added v_1.0.0)
 * WordPress German (added v_1.0.0)
 * Shopware 5  (added v_1.1.0)
