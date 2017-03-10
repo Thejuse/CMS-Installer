@@ -26,7 +26,7 @@ Install WordPress and Typo3 simple
 * Better Installing
 * Features for VestaCP
 * Typo3 Install Update
-..* Add automaticly FIRST__INSTALL File
+* Add automaticly FIRST__INSTALL File
 
 ### Planned CMS and Software
 * OwnCloud    (Planed in v.1.2.0)
