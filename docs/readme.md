@@ -22,6 +22,15 @@ Install WordPress and Typo3 simple
 * Shopware 5  (added v_1.1.0)
 * MediaWiki   (added v_1.1.0)
 
+### Planned features for v.1.2.0
+* Add Cloud Software
+* Add Updater and own Install Script
+* Change Design
+* Better Installing
+* Features for VestaCP
+* Typo3 Install Update
+* Add automaticly FIRST__INSTALL File
+
 ### Planned CMS and Software
 * OwnCloud    (Planed in v.1.2.0)
 * NextCloud   (Planed in v.1.2.0)
