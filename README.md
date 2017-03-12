@@ -24,7 +24,7 @@ Install WordPress and Typo3 simple
 * Add Updater and own Install Script
 * Change Design
 * Better Installing
-* Features for VestaCP
+* New Features for VestaCP
 * Typo3 Install Update
 * Add automaticly FIRST__INSTALL File
 
