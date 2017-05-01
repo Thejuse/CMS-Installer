@@ -8,7 +8,7 @@
 
 		<!-- CMS Installer -->
 		<!-- Coded by jseidl.at -->
-		<!-- v_1.1.0 Version -->
+		<!-- v_1.1.1 Version -->
 		<!-- Copyright 2017 -->
 
 		<!-- Bootstrap CSS -->
@@ -78,25 +78,25 @@
                     shell_exec('chmod -R 777 ../public_html');
                     shell_exec('rm -rf install_script.php');
                 }
-                else if($cms == 'Shopware 5.2.20'){
+                else if($cms == 'Shopware 5.2.22'){
                     $output ='<div class="alert alert-success"> '. $cms .' is now installed!</div>';
                     $toPageOutput = '<p><strong>Your '. $cms .' is installed</strong></p><p>Open your Page <a href="/">Here</a></p>';
-                    shell_exec('wget http://releases.s3.shopware.com.s3.amazonaws.com/install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0.zip');
-                    shell_exec('unzip install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0.zip');
-                    shell_exec('mv install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0/* .');
-                    shell_exec('rm -rf install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0/');
-                    shell_exec('rm -rf install_5.2.20_99580d1ac8d442f18721399a14e042ea610fd1a0.zip');
+                    shell_exec('wget http://releases.s3.shopware.com.s3.amazonaws.com/install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048.zip');
+                    shell_exec('unzip install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048.zip');
+                    shell_exec('mv install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048/* .');
+                    shell_exec('rm -rf install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048/');
+                    shell_exec('rm -rf install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048.zip');
                     shell_exec('chmod -R 777 ../public_html');
                     shell_exec('rm -rf install_script.php');
                 }
-                else if($cms == 'MediaWiki 1.28.0'){
+                else if($cms == 'MediaWiki 1.28.2'){
                     $output ='<div class="alert alert-success"> '. $cms .' is now installed!</div>';
                     $toPageOutput = '<p><strong>Your '. $cms .' is installed</strong></p><p>Open your Page <a href="/">Here</a></p>';
-                    shell_exec('wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.0.tar.gz');
-                    shell_exec('tar -xzvf mediawiki-1.28.0.tar.gz');
-                    shell_exec('mv mediawiki-1.28.0/* .');
-                    shell_exec('rm -rf mediawiki-1.28.0/');
-                    shell_exec('rm -rf mediawiki-1.28.0.tar.gz');
+                    shell_exec('wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.2.tar.gz');
+                    shell_exec('tar -xzvf mediawiki-1.28.2.tar.gz');
+                    shell_exec('mv mediawiki-1.28.2/* .');
+                    shell_exec('rm -rf mediawiki-1.28.2/');
+                    shell_exec('rm -rf mediawiki-1.28.2.tar.gz');
                     shell_exec('chmod -R 777 ../public_html');
                     shell_exec('rm -rf install_script.php');
                 }
@@ -130,8 +130,8 @@
 								<option>Typo3 7.6.16</option>
 								<option>WordPress (German)</option>
 								<option>WordPress (All Languages)</option>
-								<option>Shopware 5.2.20</option>
-								<option>MediaWiki 1.28.0</option>
+								<option>Shopware 5.2.22</option>
+								<option>MediaWiki 1.28.2</option>
 							</select>
 						</div>
 						<button type="submit" class="btn btn-primary">Install</button>
@@ -167,7 +167,7 @@
 						<p>&copy; <?php echo date("Y"); ?> coded by <a href="http://jseidl.at">Julian Seidl</a></p>
 					</div>
 					<div class="col-sm-4 text-center">
-						<p>v.1.1.0</p>
+						<p>v.1.1.1</p>
 					</div>
 					<div class="col-sm-4 text-right">
 						<ul>
