@@ -1,4 +1,4 @@
-# CMS-Installer v.1.1.0
+# CMS-Installer v.1.1.1
 Install WordPress and Typo3 simple
 
 ### How to Install
