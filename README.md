@@ -1,4 +1,4 @@
-# CMS-Installer v.1.1.1
+# CMS-Installer v.2.0.0
 Install CMS Software on a easy way
 
 ### How to Install
