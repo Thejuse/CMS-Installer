@@ -1,4 +1,4 @@
-# CMS-Installer v.2.0.0
+# CMS-Installer v.2.1.0
 Install CMS Software on a easy way
 
 ### How to Install
@@ -20,14 +20,20 @@ Install CMS Software on a easy way
 * EspoCRM
 * Joomla
 * MyBB
+* ImpressPages
+* Grav
+* OwnCloud
+* NextCloud
 
-### Roadmap
+## Roadmap
+### Added
+* OwnCloud		(Added in v.2.1.0)
+* NextCloud		(Added in v.2.1.0)
+* ImpressPages	(Added in v.2.1.0)
+* Grav				(Added in v.2.1.0)
 
 ### Planned CMS and Software
-* OwnCloud		(Planed in v.2.1.0)
-* NextCloud		(Planed in v.2.1.0)
-* ImpressPages	(Planed in v.2.1.0)
 * Drupal			(Planed in v.2.2.0)
 * concrete5		(Planed in v.2.2.0)
 
-Copyright 2017 - [Julian Seidl](http://jseidl.at)
+&copy; 2017 - [jSeidl](http://jseidl.at)
