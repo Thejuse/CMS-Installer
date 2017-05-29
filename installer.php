@@ -29,96 +29,96 @@
 */
 	// Database
 	$version = "v2.1.0";
-	$apps = array(
-		"WordPress" => array(
+	$apps = [
+		"WordPress" => [
 			"name" => "WordPress",
 			"version" => "4.7.6",
 			"category" => "Blog / CMS",
 			"link" => "https://wordpress.org",
 			"img" => "https://cms-installer.webintosh.at/img/wordpress.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/wordpress-4.7.6.tar.gz"
-		),
-		"Typo3-7" => array(
+		],
+		"Typo3-7" => [
 			"name" => "Typo3",
 			"version" => "7.6.18",
 			"category" => "CMS",
 			"link" => "https://typo3.org",
 			"img" => "https://cms-installer.webintosh.at/img/typo3.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/t3-7.6.18.tar.gz"
-		),
-		"MediaWiki" => array(
+		],
+		"MediaWiki" => [
 			"name" => "MediaWiki",
 			"version" => "1.28.2",
 			"description" => "",
 			"category" => "Wiki",
 			"img" => "https://cms-installer.webintosh.at/img/mediawiki.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/mediawiki-1.28.2.tar.gz"
-		),
-		"Shopware" => array(
+		],
+		"Shopware" => [
 			"name" => "Shopware",
 			"version" => "5.2.24",
 			"category" => "E-Commerce",
 			"link" => "https://de.shopware.com",
 			"img" => "https://cms-installer.webintosh.at/img/shopware.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/sw-5.2.24.zip"
-		),
-		"Espocrm" => array(
+		],
+		"Espocrm" => [
 			"name" => "Espocrm",
 			"version" => "4.7.0",
 			"category" => "CRM",
 			"link" => "https://www.espocrm.com/",
 			"img" => "https://cms-installer.webintosh.at/img/espocrm.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/EspoCRM-4.7.0.zip"
-		),
-		"Joomla" => array(
+		],
+		"Joomla" => [
 			"name" => "Joomla!",
 			"version" => "3.7.2",
 			"category" => "CMS",
 			"link" => "https://www.joomla.de/",
 			"img" => "https://cms-installer.webintosh.at/img/joomla.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/joomla-3.7.2.zip"
-		),
-		"Mybb" => array(
+		],
+		"Mybb" => [
 			"name" => "MyBB",
 			"version" => "1.8.12",
 			"category" => "Forum",
 			"link" => "https://mybb.com",
 			"img" => "https://cms-installer.webintosh.at/img/mybb.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/mybb-1.8.12.zip"
-		),
-		"Impresspages" => array(
+		],
+		"Impresspages" => [
 			"name" => "ImpressPages",
 			"version" => "5.2.0",
 			"category" => "CMS",
 			"link" => "https://www.impresspages.org",
 			"img" => "https://cms-installer.webintosh.at/img/impresspages.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/ip-5.2.0.zip"
-		),
-		"NextCloud" => array(
+		],
+		"NextCloud" => [
 			"name" => "MyBB",
 			"version" => "12.0.0",
 			"category" => "Cloud / Datastorage",
 			"link" => "https://nextcloud.com",
 			"img" => "https://cms-installer.webintosh.at/img/nextcloud.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/nextcloud-12.0.0.zip"
-		),
-		"OwnCloud" => array(
+		],
+		"OwnCloud" => [
 			"name" => "OwnCloud",
 			"version" => "10.0.1",
 			"category" => "Cloud / Datastorage",
 			"link" => "https://owncloud.org",
 			"img" => "https://cms-installer.webintosh.at/img/owncloud.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/owncloud-10.0.1.zip"
-		),
-		"Grav" => array(
+		],
+		"Grav" => [
 			"name" => "Grav",
 			"version" => "1.2.4",
 			"category" => "CMS",
 			"link" => "https://owncloud.org",
 			"img" => "https://cms-installer.webintosh.at/img/grav.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/grav-1.2.4.zip"
-		)
-	);
+		]
+	];
 	$httpMethod = filter_input(INPUT_SERVER, 'REQUEST_METHOD');
     $cms = filter_input(INPUT_POST, 'cms');
     $btnclass = "";

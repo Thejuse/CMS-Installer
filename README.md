@@ -1,6 +1,9 @@
 # CMS-Installer v.2.1.0
 Install CMS Software on a easy way
 
+### Requirements
+* PHP >= 5.4.0
+
 ### How to Install
 1. Download installer.php
 2. Upload installer.php on your Webspace 
