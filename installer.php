@@ -27,6 +27,44 @@
 * Version 2.1.0
 *
 */
+
+/**
+ * Extract content of given archive into current directory
+ * 
+ * 1. Extract (unzip / tar -xzvf) content of archive into temporary directory.
+ * 2. Move (mv) content of temporary directory into current directory.
+ * 3. Remove (rm -rf) temporary directory.
+ * 4. Remove (rm -rf) archive.
+ * 
+ * @param string $type Type of archive; either 'tar' or 'zip'
+ * @param string $filename Name of archive file
+ * @param string $temporaryDirectory (optional) Inferred from filename if empty
+ * 
+ * @return void
+ */
+function extractArchive($type, $filename, $temporaryDirectory = '')
+{
+    if ( ! in_array($type, ['tar', 'zip'])) {
+        return;
+    }
+    
+    $extension = ($type === 'tar') ? '.tar.gz' : '.zip' ;
+    
+    if ($temporaryDirectory === '') {
+        $temporaryDirectory = substr($filename, 0, strpos($filename, $extension));
+    }
+    
+    if ($type === 'tar') {
+        exec('tar -xzvf ' . $filename);
+    } else {
+        exec('unzip ' . $filename);
+    }
+    
+    exec('mv ' . $temporaryDirectory . '/* .');
+    exec('rm -rf ' . $temporaryDirectory . '/');
+    exec('rm -rf ' . $filename);
+}
+
 	// Database
 	$version = "v2.1.0";
 	$apps = array(
@@ -129,163 +167,84 @@
     	$afterinstall = "notshow";
     	$isinstalled = "isinstalled";
     	$installed = "progress-bar-installed";
-    	if("Typo3-7" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('tar -xzvf t3-7.6.16.tar.gz');
-                    exec('mv typo3_src-7.6.16/* .');
-                    exec('rm -rf typo3_src-7.6.16/');
-                    exec('ln -s ..'. $pathname .' typo3_src');
+        
+        if (array_key_exists($cms, $apps)) {
+            $pathname = dirname(filter_input(INPUT_SERVER, 'PHP_SELF'));
+            
+            exec('wget ' . $apps[$cms]['download'] . ' ');
+            
+            switch ($cms) {
+                case 'Typo3-7':
+                    extractArchive('tar', 't3-7.6.16.tar.gz', 'typo3_src-7.6.16');
+                    
+                    exec('ln -s ..' . $pathname . ' typo3_src');
                     exec('ln -s typo3_src/typo3 typo3');
                     exec('ln -s typo3_src/index.php index.php');
-                    exec('rm -rf t3-7.6.16.tar.gz');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("WordPress" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('tar -xzvf wordpress-4.7.4.tar.gz');
-                    exec('mv wordpress/* .');
-                    exec('rm -rf wordpress/');
-                    exec('rm -rf wordpress-4.7.4.tar.gz');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("MediaWiki" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('tar -xzvf mediawiki-1.28.2.tar.gz');
-                    exec('mv mediawiki-1.28.2/* .');
-                    exec('rm -rf mediawiki-1.28.2/');
-                    exec('rm -rf mediawiki-1.28.2.tar.gz');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                   	exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("Shopware" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('unzip sw-5.22.2.zip');
-                    exec('mv install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048/* .');
-                    exec('rm -rf install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048/');
-                    exec('rm -rf sw-5.22.2.zip');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("Espocrm" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('unzip EspoCRM-4.6.0.zip');
-                    exec('mv EspoCRM-4.6.0/* .');
-                    exec('rm -rf EspoCRM-4.6.0/');
-                    exec('rm -rf EspoCRM-4.6.0.zip');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-		else if("Joomla" === $cms){
-			foreach ($apps as $items => $item) {
-				if($items === $cms){
-					$pathname = dirname($_SERVER['PHP_SELF']);
-					exec('wget '. $item["download"] .' ');
-					exec('unzip joomla-3.7.0.zip');
-					exec('mv Joomla_3.7.0-Stable-Full_Package/* .');
-					exec('rm -rf Joomla_3.7.0-Stable-Full_Package/');
-					exec('rm -rf joomla-3.7.0.zip');
-					exec('chmod -R 775 ..'. $pathname .'');
-					exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("Mybb" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('unzip mybb-1.8.11.zip');
-                    exec('mv mybb-1.8.11/* .');
-                    exec('rm -rf mybb-1.8.11/');
-                    exec('rm -rf mybb-1.8.11.zip');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("Impresspages" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('unzip ip-4.10.1.zip');
-                    exec('mv ImpressPages/* .');
-                    exec('rm -rf ImpressPages/');
-                    exec('rm -rf ip-4.10.1.zip');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("NextCloud" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('unzip nextcloud-11.0.3.zip');
-                    exec('mv nextcloud/* .');
-                    exec('rm -rf nextcloud/');
-                    exec('rm -rf nextcloud-11.0.3.zip');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("OwnCloud" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('unzip owncloud-10.0.0.zip');
-                    exec('mv owncloud/* .');
-                    exec('rm -rf owncloud/');
-                    exec('rm -rf owncloud-10.0.0.zip');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
-    	else if("Grav" === $cms){
-    		foreach ($apps as $items => $item) {
-    			if($items === $cms){
-    				$pathname = dirname($_SERVER['PHP_SELF']);
-    				exec('wget '. $item["download"] .' ');
-    				exec('unzip grav-1.2.4.zip');
-                    exec('mv grav-admin/* .');
-                    exec('rm -rf grav-admin/');
-                    exec('rm -rf grav-1.2.4.zip');
-                    exec('chmod -R 775 ..'. $pathname .'');
-                    exec('rm -rf installer.php');
-    			}
-    		}
-    	}
+                    
+                    break;
+                
+                case 'WordPress':
+                    extractArchive('tar', 'wordpress-4.7.4.tar.gz', 'wordpress');
+                    
+                    break;
+                
+                case 'MediaWiki':
+                    extractArchive('tar', 'mediawiki-1.28.2.tar.gz');
+                    
+                    break;
+                
+                case 'Shopware':
+                    extractArchive(
+                        'zip',
+                        'sw-5.22.2.zip',
+                        'install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048'
+                    );
+                    
+                    break;
+                
+                case 'Espocrm':
+                    extractArchive('zip', 'EspoCRM-4.6.0.zip');
+                    
+                    break;
+                
+                case 'Joomla':
+                    extractArchive(
+                        'zip',
+                        'joomla-3.7.0.zip',
+                        'Joomla_3.7.0-Stable-Full_Package'
+                    );
+                    
+                    break;
+                
+                case 'Mybb':
+                    extractArchive('zip', 'mybb-1.8.11.zip');
+                    
+                    break;
+                
+                case 'Impresspages':
+                    extractArchive('zip', 'ip-4.10.1.zip', 'ImpressPages');
+                    
+                    break;
+                
+                case 'NextCloud':
+                    extractArchive('zip', 'nextcloud-11.0.3.zip', 'nextcloud');
+                    
+                    break;
+                
+                case 'OwnCloud':
+                    extractArchive('zip', 'owncloud-10.0.0.zip', 'owncloud');
+                    
+                    break;
+                
+                case 'Grav':
+                    extractArchive('zip', 'grav-1.2.4.zip', 'grav-admin');
+                    
+                    break;
+            }
+            
+            exec('chmod -R 775 ..' . $pathname);
+            exec('rm -rf installer.php');
+        }
     }
 ?>
 <!DOCTYPE html>
