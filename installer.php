@@ -24,10 +24,9 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 *
-* Version 2.1.0
+* Version 2.2.0-dev
 *
 */
-
 /**
  * Extract content of given archive into current directory
  * 
@@ -64,9 +63,8 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
     exec('rm -rf ' . $temporaryDirectory . '/');
     exec('rm -rf ' . $filename);
 }
-
 	// Database
-	$version = "v2.1.0";
+	$version = "v2.2.0-dev";
 	$apps = [
 		"WordPress" => [
 			"name" => "WordPress",
@@ -155,6 +153,33 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"link" => "https://owncloud.org",
 			"img" => "https://cms-installer.webintosh.at/img/grav.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.0/grav-1.2.4.zip"
+		],
+		"Concrete5" => [
+			"name" => "Concrete5",
+			"version" => "8.1.0",
+			"category" => "CMS",
+			"category-text" => "cms",
+			"link" => "https://www.concrete5.org",
+			"img" => "https://cms-installer.webintosh.at/img/concrete5.png",
+			"download" => "https://cms-installer.webintosh.at/2.2.0/grav-1.2.4.zip"
+		],
+		"phpBB" => [
+			"name" => "phpBB",
+			"version" => "3.2.0",
+			"category" => "Forum",
+			"category-text" => "foro",
+			"link" => "https://www.phpbb.de/",
+			"img" => "https://cms-installer.webintosh.at/img/phpbb.png",
+			"download" => "https://cms-installer.webintosh.at/2.2.0/phpBB-3.2.0.zip"
+		],
+		"osTicket" => [
+			"name" => "osTicket",
+			"version" => "1.10.0",
+			"category" => "HelpDesk",
+			"category-text" => "hd",
+			"link" => "http://osticket.com/",
+			"img" => "https://cms-installer.webintosh.at/img/osticket.png",
+			"download" => "https://cms-installer.webintosh.at/2.2.0/osTicket-v1.10.zip"
 		]
 	];
 	$httpMethod = filter_input(INPUT_SERVER, 'REQUEST_METHOD');
@@ -240,6 +265,10 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
                     extractArchive('zip', 'grav-1.2.4.zip', 'grav-admin');
                     
                     break;
+
+                case 'Concrete5':
+                	extract('zip', 'concrete5-8.1.0.zip'. 'concrete5-8.1.0')
+                	break;
             }
             
             exec('chmod -R 775 ..' . $pathname);
