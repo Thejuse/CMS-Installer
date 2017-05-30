@@ -267,7 +267,8 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
                     break;
 
                 case 'Concrete5':
-                	extract('zip', 'concrete5-8.1.0.zip'. 'concrete5-8.1.0')
+                	extract('zip', 'concrete5-8.1.0.zip'. 'concrete5-8.1.0');
+                    
                 	break;
             }
             
