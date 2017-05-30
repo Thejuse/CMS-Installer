@@ -1,4 +1,4 @@
-# CMS-Installer v.2.1.0
+# CMS-Installer v.2.2.0-dev
 Install CMS Software on a easy way
 
 ### Requirements
@@ -30,12 +30,6 @@ Install CMS Software on a easy way
 
 ## Roadmap
 ### Added
-* OwnCloud		(Added in v.2.1.0)
-* NextCloud		(Added in v.2.1.0)
-* ImpressPages	(Added in v.2.1.0)
-* Grav				(Added in v.2.1.0)
-
-### Planned CMS and Software
 * Drupal			(Planed in v.2.2.0)
 * concrete5		(Planed in v.2.2.0)
 
