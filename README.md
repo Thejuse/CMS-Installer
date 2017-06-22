@@ -1,4 +1,4 @@
-# CMS-Installer v.2.1.0
+# CMS-Installer v.2.1.1
 Install CMS Software on a easy way
 
 ### Requirements
@@ -16,7 +16,7 @@ Install CMS Software on a easy way
 4. Type in your Database credentials and add an User
 
 ### Features
-* Typo3 7.6.16
+* Typo3 7.6.19
 * WordPress
 * Shopware 5
 * MediaWiki

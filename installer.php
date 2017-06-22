@@ -24,7 +24,7 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 *
-* Version 2.1.0
+* Version 2.1.1
 *
 */
 
@@ -66,23 +66,23 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 }
 
 	// Database
-	$version = "v2.1.0";
+	$version = "v2.1.1";
 	$apps = [
 		"WordPress" => [
 			"name" => "WordPress",
-			"version" => "4.7.6",
+			"version" => "4.8",
 			"category" => "Blog / CMS",
 			"link" => "https://wordpress.org",
 			"img" => "https://cms-installer.webintosh.at/img/wordpress.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/wordpress-4.7.6.tar.gz"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/wordpress-4.8.tar.gz"
 		],
 		"Typo3-7" => [
 			"name" => "Typo3",
-			"version" => "7.6.18",
+			"version" => "7.6.19",
 			"category" => "CMS",
 			"link" => "https://typo3.org",
 			"img" => "https://cms-installer.webintosh.at/img/typo3.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/t3-7.6.18.tar.gz"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/t3-7.6.19.tar.gz"
 		],
 		"MediaWiki" => [
 			"name" => "MediaWiki",
@@ -90,7 +90,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"description" => "",
 			"category" => "Wiki",
 			"img" => "https://cms-installer.webintosh.at/img/mediawiki.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/mediawiki-1.28.2.tar.gz"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/mediawiki-1.28.2.tar.gz"
 		],
 		"Shopware" => [
 			"name" => "Shopware",
@@ -98,15 +98,15 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"category" => "E-Commerce",
 			"link" => "https://de.shopware.com",
 			"img" => "https://cms-installer.webintosh.at/img/shopware.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/sw-5.2.24.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/sw-5.2.24.zip"
 		],
 		"Espocrm" => [
 			"name" => "Espocrm",
-			"version" => "4.7.0",
+			"version" => "4.7.2",
 			"category" => "CRM",
 			"link" => "https://www.espocrm.com/",
 			"img" => "https://cms-installer.webintosh.at/img/espocrm.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/EspoCRM-4.7.0.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/EspoCRM-4.7.2.zip"
 		],
 		"Joomla" => [
 			"name" => "Joomla!",
@@ -114,7 +114,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"category" => "CMS",
 			"link" => "https://www.joomla.de/",
 			"img" => "https://cms-installer.webintosh.at/img/joomla.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/joomla-3.7.2.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/joomla-3.7.2.zip"
 		],
 		"Mybb" => [
 			"name" => "MyBB",
@@ -122,7 +122,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"category" => "Forum",
 			"link" => "https://mybb.com",
 			"img" => "https://cms-installer.webintosh.at/img/mybb.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/mybb-1.8.12.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/mybb-1.8.12.zip"
 		],
 		"Impresspages" => [
 			"name" => "ImpressPages",
@@ -130,7 +130,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"category" => "CMS",
 			"link" => "https://www.impresspages.org",
 			"img" => "https://cms-installer.webintosh.at/img/impresspages.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/ip-5.2.0.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/ip-5.2.0.zip"
 		],
 		"NextCloud" => [
 			"name" => "MyBB",
@@ -138,15 +138,15 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"category" => "Cloud / Datastorage",
 			"link" => "https://nextcloud.com",
 			"img" => "https://cms-installer.webintosh.at/img/nextcloud.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/nextcloud-12.0.0.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/nextcloud-12.0.0.zip"
 		],
 		"OwnCloud" => [
 			"name" => "OwnCloud",
-			"version" => "10.0.1",
+			"version" => "10.0.2",
 			"category" => "Cloud / Datastorage",
 			"link" => "https://owncloud.org",
 			"img" => "https://cms-installer.webintosh.at/img/owncloud.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/owncloud-10.0.1.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/owncloud-10.0.2.zip"
 		],
 		"Grav" => [
 			"name" => "Grav",
@@ -154,7 +154,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"category" => "CMS",
 			"link" => "https://owncloud.org",
 			"img" => "https://cms-installer.webintosh.at/img/grav.png",
-			"download" => "https://cms-installer.webintosh.at/2.1.0/grav-1.2.4.zip"
+			"download" => "https://cms-installer.webintosh.at/2.1.1/grav-1.2.4.zip"
 		]
 	];
 	$httpMethod = filter_input(INPUT_SERVER, 'REQUEST_METHOD');
