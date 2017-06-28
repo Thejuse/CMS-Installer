@@ -1,4 +1,4 @@
-# CMS-Installer v.2.1.1
+# CMS-Installer v.2.1.2
 Install CMS Software on a easy way
 
 ### Requirements
@@ -16,7 +16,7 @@ Install CMS Software on a easy way
 4. Type in your Database credentials and add an User
 
 ### Features
-* Typo3 7.6.19
+* Typo3 7.6.x
 * WordPress
 * Shopware 5
 * MediaWiki
@@ -29,12 +29,6 @@ Install CMS Software on a easy way
 * NextCloud
 
 ## Roadmap
-### Added
-* OwnCloud		(Added in v.2.1.0)
-* NextCloud		(Added in v.2.1.0)
-* ImpressPages	(Added in v.2.1.0)
-* Grav				(Added in v.2.1.0)
-
 ### Planned CMS and Software
 * Drupal			(Planed in v.2.2.0)
 * concrete5		(Planed in v.2.2.0)
