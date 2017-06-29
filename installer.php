@@ -24,7 +24,7 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 *
-* Version 2.1.2
+* Version 2.1.3
 *
 */
 
@@ -66,7 +66,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 }
 
 	// Database
-	$version = "v2.1.2";
+	$version = "v2.1.3";
 	$apps = [
 		"WordPress" => [
 			"name" => "WordPress",
@@ -175,7 +175,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
             
             switch ($cms) {
                 case 'Typo3-7':
-                    extractArchive('tar', 't3-7.6.16.tar.gz', 'typo3_src-7.6.16');
+                    extractArchive('tar', 't3-7.6.19.tar.gz', 'typo3_src-7.6.19');
                     
                     exec('ln -s ..' . $pathname . ' typo3_src');
                     exec('ln -s typo3_src/typo3 typo3');
@@ -184,7 +184,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
                     break;
                 
                 case 'WordPress':
-                    extractArchive('tar', 'wordpress-4.7.4.tar.gz', 'wordpress');
+                    extractArchive('tar', 'wordpress-4.8.tar.gz', 'wordpress');
                     
                     break;
                 
@@ -196,43 +196,43 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
                 case 'Shopware':
                     extractArchive(
                         'zip',
-                        'sw-5.22.2.zip',
-                        'install_5.2.22_0010210a2d8f7c275ca9bbed06b0f213cbb4b048'
+                        'sw-5.2.26.zip',
+                        'sw-5.2.26'
                     );
                     
                     break;
                 
                 case 'Espocrm':
-                    extractArchive('zip', 'EspoCRM-4.6.0.zip');
+                    extractArchive('zip', 'EspoCRM-4.7.2.zip');
                     
                     break;
                 
                 case 'Joomla':
                     extractArchive(
                         'zip',
-                        'joomla-3.7.0.zip',
-                        'Joomla_3.7.0-Stable-Full_Package'
+                        'joomla-3.7.2.zip',
+                        'Joomla_3.7.2-Stable-Full_Package'
                     );
                     
                     break;
                 
                 case 'Mybb':
-                    extractArchive('zip', 'mybb-1.8.11.zip');
+                    extractArchive('zip', 'mybb-1.8.12.zip');
                     
                     break;
                 
                 case 'Impresspages':
-                    extractArchive('zip', 'ip-4.10.1.zip', 'ImpressPages');
+                    extractArchive('zip', 'ip-5.2.0.zip', 'ImpressPages');
                     
                     break;
                 
                 case 'NextCloud':
-                    extractArchive('zip', 'nextcloud-11.0.3.zip', 'nextcloud');
+                    extractArchive('zip', 'nextcloud-12.0.0.zip', 'nextcloud');
                     
                     break;
                 
                 case 'OwnCloud':
-                    extractArchive('zip', 'owncloud-10.0.0.zip', 'owncloud');
+                    extractArchive('zip', 'owncloud-10.0.2.zip', 'owncloud');
                     
                     break;
                 
