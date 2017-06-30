@@ -16,7 +16,7 @@ Install CMS Software on a easy way
 4. Type in your Database credentials and add an User
 
 ### Features
-* Typo3 7.6.16
+* Typo3 7.6.x
 * WordPress
 * Shopware 5
 * MediaWiki
@@ -28,8 +28,12 @@ Install CMS Software on a easy way
 * OwnCloud
 * NextCloud
 
+### Pre-Release Features
+* Sorting
+* Design Changes
+
 ## Roadmap
-### Added
+### Planned CMS and Software
 * Drupal			(Planed in v.2.2.0)
 * concrete5		(Planed in v.2.2.0)
 
