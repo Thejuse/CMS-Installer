@@ -1,0 +1,1 @@
+function scrollTo(){$("a[href^=#]").on("click",function(o){var t=$(this).attr("href");$("html, body").animate({scrollTop:$(t).offset().top},"slow"),o.preventDefault()})}$(document).ready(function(){scrollTo()});
