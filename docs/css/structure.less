@@ -1,0 +1,220 @@
+/*
+ *	Head/Navigation
+ */
+.head{
+    background-color: @cDarkGray;
+    padding: 10px 0;
+    border-bottom: 4px solid @cGreen;
+    .logo{
+        p{
+            font-family: @fPacifico;
+            color: @cWhite;
+            font-size: 26px;
+            margin: 0;
+            transition: 0.2s linear;
+            &:hover{
+                color: @cGreen;
+                transition: 0.2s linear;
+            }
+        }
+    }
+    .navigation{
+        nav{
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li{
+                    display: inline-block;
+                    padding: 0 10px;
+                    a{
+                        color: @cWhite;
+                        font-family: @fOrbitron;
+                        font-size: 23px;
+                        transition: 0.2s linear;
+                        &:hover{
+                            color: @cGreen;
+                            text-decoration: none;
+                            transition: 0.2s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+ *	Content
+ */
+.content{
+    .page-header{
+        background-color: #159957;
+        background-image: linear-gradient(120deg, #155799, #159957);
+        height: 400px;
+        h1{
+            color: @cWhite;
+            font-size: 52px;
+        }
+        p{
+            color: @cWhite;
+            opacity: 0.7;
+            font-size: 20px;
+        }
+        .btn{
+            color: @cWhite;
+            display: inline-block;
+            color: rgba(255,255,255,0.7);
+            background-color: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.2);
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0.3rem;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+            &:hover{
+                color: rgba(255,255,255,0.8);
+                text-decoration: none;
+                background-color: rgba(255,255,255,0.2);
+                border-color: rgba(255,255,255,0.3);            
+            }
+        }
+    }
+    .features{
+        padding: 60px 0;
+        .headline{
+            margin-bottom: 20px;
+            h3{
+                font-size: 45px;
+                color: @cDarkGreen;
+            }
+        }
+        .features-overview{
+            margin-bottom: 50px;
+            .icons{
+                .fa{
+                    color: @cGray;
+                    margin-bottom: 20px;
+                    transition: 0.2s linear;
+                }
+                p{
+                    color: @cGray;
+                    font-size: 28px;
+                    font-weight: 300;
+                    transition: 0.2s linear;
+                }
+                &:hover{
+                    .fa{
+                        color: @cGreen;
+                        transition: 0.2s linear;
+                    }
+                    p{
+                        color: @cGreen;
+                        transition: 0.2s linear;
+                    }
+                }
+            }
+        }
+        .features-box{
+            h4{
+                font-size: 40px;
+                color: @cDarkGreen;
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li{
+                    font-size: 20px;
+                    color: @cGray;
+                    transition: 0.2s linear;
+                    &:hover{
+                        color: @cGreen;
+                        transition: 0.2s linear;
+                    }
+                }
+            }
+        }
+    }
+    .download{
+        margin: 60px 0;
+        padding: 60px 0;
+        background: #E0E0E0;
+        .headline{
+            margin-bottom: 20px;
+            h3{
+                font-size: 45px;
+                color: @cDarkGreen;
+                font-family: @fPacifico;
+            }
+        }
+        p{
+            font-weight: 300;
+            color: @cGray;
+            margin: 10px 0;
+        }
+        .get{
+            margin-top: 30px;
+            .btn{
+                display: inline-block;
+                color: @cWhite;
+                background-color: @cDarkGreen;
+                border: 2px solid @cDarkGreen;
+                font-weight: 300;
+                font-size: 20px;
+                border-radius: 0;
+                transition: 0.2s linear;
+                &:hover{
+                    background-color: transparent;
+                    color: @cDarkGreen;
+                    transition: 0.2s linear;
+                }                
+            }
+        }
+    }
+    .news{
+        margin: 30px 0;
+        padding: 60px 0;
+        .headline{
+            margin-bottom: 20px;
+            h3{
+                font-size: 45px;
+                color: @cDarkGreen;
+            }
+        }
+        .article{
+            .headline{
+                font-weight: 500;
+                color: @cDarkGreen;
+                font-size: 24px;
+                margin: 0;
+            }
+            time{
+                color: @cGray;
+                font-size: 16px;
+                font-weight: 300;
+            }
+            p{
+                color: @cGray;
+                font-size: 20px;
+                font-weight: 400;
+                margin: 0;
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+/*
+ *	Footer
+ */
+.footer{
+    background-color: @cDarkGray;
+    padding: 20px 0;
+    border-top: 4px solid @cGreen;
+    p{
+        color: @cWhite;
+        font-weight: 300;
+        font-size: 18px;
+        margin: 0;
+    }
+}
