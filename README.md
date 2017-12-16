@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # CMS-Installer v.2.1.3
 Install CMS Software on an easy way
+=======
+# CMS-Installer v.2.2.0-dev
+Install CMS Software on a easy way
+>>>>>>> eb9e2ad559083ea1ac4d05457532e3b77aa46ee7
 
 ### Requirements
 * PHP >= 5.4.0
@@ -28,6 +33,13 @@ Install CMS Software on an easy way
 * OwnCloud
 * NextCloud
 
+<<<<<<< HEAD
+=======
+### Pre-Release Features
+* Sorting
+* Design Changes
+
+>>>>>>> eb9e2ad559083ea1ac4d05457532e3b77aa46ee7
 ## Roadmap
 ### Planned CMS and Software
 * Drupal			(Planned in v.2.2.0)

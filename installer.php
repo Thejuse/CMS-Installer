@@ -24,7 +24,11 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 *
+<<<<<<< HEAD
 * Version 2.1.3
+=======
+* Version 2.2.0-dev
+>>>>>>> eb9e2ad559083ea1ac4d05457532e3b77aa46ee7
 *
 */
 
@@ -66,12 +70,17 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 }
 
 	// Database
+<<<<<<< HEAD
 	$version = "v2.1.3";
+=======
+	$version = "v2.2.0-dev";
+>>>>>>> eb9e2ad559083ea1ac4d05457532e3b77aa46ee7
 	$apps = [
 		"WordPress" => [
 			"name" => "WordPress",
 			"version" => "4.8",
 			"category" => "Blog / CMS",
+			"category-desc" => "cms",
 			"link" => "https://wordpress.org",
 			"img" => "https://cms-installer.webintosh.at/img/wordpress.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/wordpress-4.8.tar.gz"
@@ -80,6 +89,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "Typo3",
 			"version" => "7.6.19",
 			"category" => "CMS",
+			"category-desc" => "cms",
 			"link" => "https://typo3.org",
 			"img" => "https://cms-installer.webintosh.at/img/typo3.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/t3-7.6.19.tar.gz"
@@ -87,8 +97,9 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 		"MediaWiki" => [
 			"name" => "MediaWiki",
 			"version" => "1.28.2",
-			"description" => "",
 			"category" => "Wiki",
+			"category-desc" => "wiki",
+			"link" => "https://www.mediawiki.org",
 			"img" => "https://cms-installer.webintosh.at/img/mediawiki.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/mediawiki-1.28.2.tar.gz"
 		],
@@ -96,6 +107,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "Shopware",
 			"version" => "5.2.26",
 			"category" => "E-Commerce",
+			"category-desc" => "shop",
 			"link" => "https://de.shopware.com",
 			"img" => "https://cms-installer.webintosh.at/img/shopware.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/sw-5.2.26.zip"
@@ -104,7 +116,8 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "Espocrm",
 			"version" => "4.7.2",
 			"category" => "CRM",
-			"link" => "https://www.espocrm.com/",
+			"category-desc" => "crm",
+			"link" => "https://www.espocrm.com",
 			"img" => "https://cms-installer.webintosh.at/img/espocrm.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/EspoCRM-4.7.2.zip"
 		],
@@ -112,7 +125,8 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "Joomla!",
 			"version" => "3.7.2",
 			"category" => "CMS",
-			"link" => "https://www.joomla.de/",
+			"category-desc" => "cms",
+			"link" => "https://www.joomla.de",
 			"img" => "https://cms-installer.webintosh.at/img/joomla.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/joomla-3.7.2.zip"
 		],
@@ -120,6 +134,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "MyBB",
 			"version" => "1.8.12",
 			"category" => "Forum",
+			"category-desc" => "foro",
 			"link" => "https://mybb.com",
 			"img" => "https://cms-installer.webintosh.at/img/mybb.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/mybb-1.8.12.zip"
@@ -128,6 +143,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "ImpressPages",
 			"version" => "5.2.0",
 			"category" => "CMS",
+			"category-desc" => "cms",
 			"link" => "https://www.impresspages.org",
 			"img" => "https://cms-installer.webintosh.at/img/impresspages.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/ip-5.2.0.zip"
@@ -136,6 +152,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "MyBB",
 			"version" => "12.0.0",
 			"category" => "Cloud / Datastorage",
+			"category-desc" => "cloud",
 			"link" => "https://nextcloud.com",
 			"img" => "https://cms-installer.webintosh.at/img/nextcloud.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/nextcloud-12.0.0.zip"
@@ -144,6 +161,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "OwnCloud",
 			"version" => "10.0.2",
 			"category" => "Cloud / Datastorage",
+			"category-desc" => "cloud",
 			"link" => "https://owncloud.org",
 			"img" => "https://cms-installer.webintosh.at/img/owncloud.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/owncloud-10.0.2.zip"
@@ -152,6 +170,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 			"name" => "Grav",
 			"version" => "1.2.4",
 			"category" => "CMS",
+			"category-desc" => "cms",
 			"link" => "https://owncloud.org",
 			"img" => "https://cms-installer.webintosh.at/img/grav.png",
 			"download" => "https://cms-installer.webintosh.at/2.1.2/grav-1.2.4.zip"
@@ -257,17 +276,33 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style type="text/css">
-			@import url(https://fonts.googleapis.com/css?family=Oswald);@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);.head{background-color:#212121;padding-top:15px;padding-bottom:15px}.head .head--headline{color:#FFF;font-family:Oswald;font-size:26px;margin-bottom:0}.main{margin-top:20px}.main.notshow{display:none}.main.afterinstall{display:none}.main.afterinstall.isinstalled{display:block!important}.main .cms-list .grid .grid-item{width:50%;padding-left:10px;padding-right:10px}@media (max-width:992px){.main .cms-list .grid .grid-item{width:100%;padding-right:0;padding-left:0}.main .cms-list .grid .grid-item .panel-default .panel-body .col-sm-6:nth-child(2){padding-top:20px}}.main .main--information{margin-top:20px;font-size:13px;font-family:Ubuntu;font-weight:400}.display-table{display:table;width:100%;height:100%}.display-table .display-table-cell{display:table-cell;width:100%;height:100%;vertical-align:middle;text-align:center}.display-table .display-table-cell.left{text-align:left}.display-table .display-table-cell.right{text-align:right}.display-table .display-table-cell.top{vertical-align:top}.display-table .display-table-cell.bottom{vertical-align:bottom}.footer{background-color:#212121;padding-top:15px;padding-bottom:15px}.footer p{color:#FFF;font-family:Ubuntu;font-variant:400;margin-bottom:0}.footer p a{color:#FFF}.footer ul li a{color:#FFF}
+			@import url(https://fonts.googleapis.com/css?family=Oswald);@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);.footer p,.footer p a,.footer ul li a{color:#FFF}.head{background-color:#212121;margin-bottom:10px;border-bottom:5px solid #3c0}.footer p,.navbar{margin-bottom:0}.btn-primary,.btn-primary:hover{border-color:#3BEA01;transition:.3s linear}.head .head--headline{color:#FFF;font-family:Oswald;font-size:26px;margin-bottom:0}.main{margin-top:20px}.main.afterinstall,.main.notshow{display:none}.main.afterinstall.isinstalled{display:block!important}.main .cms-list .grid .grid-item{width:50%;padding-left:10px;padding-right:10px}@media (max-width:992px){.main .cms-list .grid .grid-item{width:100%;padding-right:0;padding-left:0}.main .cms-list .grid .grid-item .panel-default .panel-body .col-sm-6:nth-child(2){padding-top:20px}}.main .main--information{margin-top:20px;font-size:13px;font-family:Ubuntu;font-weight:400}.btn-primary{background-color:#3c0}.btn-primary:hover{background-color:#3BEA01}.display-table{display:table;width:100%;height:100%}.display-table .display-table-cell{display:table-cell;width:100%;height:100%;vertical-align:middle;text-align:center}.display-table .display-table-cell.left{text-align:left}.display-table .display-table-cell.right{text-align:right}.display-table .display-table-cell.top{vertical-align:top}.display-table .display-table-cell.bottom{vertical-align:bottom}.footer{background-color:#212121;padding-top:15px;padding-bottom:15px;border-top:5px solid #3c0}.footer p{font-family:Ubuntu;font-variant:400}
 		</style>
 	</head>
 	<body>
 		<header class="head">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="head--headline">CMS-Installer</p>
-					</div>
-				</div>
+			<div class="navbar navbar-inverse">
+    			<div class="container-fluid">
+        			<div class="navbar-header">
+			            <a class="head--headline" href="https://cmsinstaller.jseidl.at">CMS-Installer</a>
+			            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			            </button>
+			        </div>
+			        <div class="navbar-collapse collapse" id="navbar-main">
+			            <ul class="nav navbar-nav navbar-right" id="filters">
+			                <li><a data-filter="*">All</a></li>
+			                <li><a data-filter=".cms">CMS</a></li>
+			                <li><a data-filter=".cloud">Cloud</a></li>
+			                <li><a data-filter=".crm">CRM</a></li>
+			                <li><a data-filter=".shop">E-Commerce</a></li>
+			                <li><a data-filter=".foro">Forum</a></li>
+			                <li><a data-filter=".wiki">Wiki</a></li>
+			            </ul>
+			        </div>
+			    </div>
 			</div>
 		</header>
 		<main class="main <?php echo $afterinstall ?> ">
@@ -280,7 +315,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 									$output = "";
 									foreach ($apps as $key => $app){
 										$output .= '
-											<div class="grid-item">
+											<div class="grid-item transition '. $app["category-desc"] .'"  data-category="'. $app["category-desc"] .'">
 												<div class="panel panel-default">
 													<div class="panel-heading"><i class="fa fa-angle-double-right" aria-hidden="true"></i> '. $app["name"] .'</div>
 													<div class="panel-body">
@@ -291,6 +326,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 															<div class="col-sm-6">
 																<p><b>Category:</b> '. $app["category"] .'</p>
 																<p><b>Version:</b> '. $app["version"] .'</p>
+																<p><b>Website:</b> <a href="'. $app["link"] .'">'. $app["link"] .'</a></p>
 															</div>
 														</div>
 													</div>
@@ -340,13 +376,13 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 		<footer class="footer">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-xs-4">
 						<p>&copy; <?php echo date("Y"); ?> by <a href="https://jseidl.at">jSeidl</a></p>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-xs-4 text-center">
 						<p><?php echo($version); ?></p>
 					</div>
-					<div class="col-md-4 text-right">
+					<div class="col-xs-4 text-right">
 						<ul>
 							<li><a href="https://github.com/webintosh/CMS-Installer/issues">Bug report</a></li>
 						</ul>
@@ -356,7 +392,7 @@ function extractArchive($type, $filename, $temporaryDirectory = '')
 		</footer>
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-		<script>function masonry(){$(".grid").masonry({itemSelector:".grid-item"})}function progressbar(){$(".progress-bar-installed").animate({width:"100%"},2500)}$(window).load(function(){masonry(),progressbar()});</script>
+		<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		<script>function progressbar(){$(".progress-bar-installed").animate({width:"100%"},2500)}$(window).load(function(){progressbar();var r=$(".grid").isotope({itemSelector:".grid-item",layoutMode:"masonry"});$("#filters").on("click","a",function(){var t=$(this).attr("data-filter");r.isotope({filter:t})})});</script>
 	</body>
 </html>

@@ -124,12 +124,6 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/installer.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/installer.php",
-		"oF": 0
-		},
 	"\/javascript\/external\/bootstrap\/bootstrap-3.3.7\/bootstrap.js": {
 		"ft": 64,
 		"ma": 0,
@@ -3660,24 +3654,6 @@
 		"oA": 2,
 		"oAP": "\/LICENSE",
 		"oF": 0
-		},
-	"\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
 		}
 	},
 "hooks": [
